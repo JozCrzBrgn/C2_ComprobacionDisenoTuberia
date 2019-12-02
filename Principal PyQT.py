@@ -18,7 +18,6 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
     
     # Funciòn que se ejecuta al pulsar el botòn:
     def calculos_QV(self):
-        p = float(self.txt_p.text())
         u = float(self.txt_u.text())
         H = float(self.txt_H.text())
         L = float(self.txt_L.text())
@@ -26,7 +25,7 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         ks = float(self.txt_ks.text())
         km = float(self.txt_km.text())
         z2 = float(self.txt_z2.text())
-        [Q,V] = cdt.Q_ComprobacionDiseno(L,d,ks,H,km,p,u,z2)
+        [Q,V] = cdt.Q_ComprobacionDiseno(L,d,ks,H,km,u,z2)
         self.lbl_Q.setText('{:.2f}'.format(Q))
         self.lbl_V.setText('{:.2f}'.format(V))
 

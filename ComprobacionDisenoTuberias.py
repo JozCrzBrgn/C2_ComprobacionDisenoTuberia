@@ -17,7 +17,6 @@ Inputs:
     ks  = Rugosidad Absoluta (metros).
     H   = Diferencia de nivel entre los tnques de abastecimiento de agua (metros).
     km  = Coeficiente global de pérdidas menores de los accesorios (adimensional).
-    p   = Densidad (Kg/m^3)
     u   = Viscosidad dinámica (m^2/seg)
     z2  = Diferencia de altura vertical entre la toma de la tubería y la planta (metros).
 
@@ -32,7 +31,7 @@ Programado por:
 import math
 
 '''Función principal'''
-def Q_ComprobacionDiseno(L,d,ks,H,km,p,u,z2):
+def Q_ComprobacionDiseno(L,d,ks,H,km,u,z2):
 
     ''' Constantes '''
     g = 9.807 # Aceleración de la gravedad
