@@ -12,7 +12,7 @@ class MyApp(QtWidgets.QMainWindow, Ui_MainWindow):
         Ui_MainWindow.__init__(self)
         self.setupUi(self)
 
-        # Aqui se declaran los botones a usar:
+        # Aqui se declaran los botones a usar :
         self.btn_calcular.clicked.connect(self.calculos_QV)
 
     
