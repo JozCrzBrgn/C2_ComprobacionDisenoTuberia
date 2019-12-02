@@ -3,9 +3,10 @@ Función:
     Comprobación de diseño de tuberías simples.
 
 Descripción:
-    En éste tipo de problemas se conocen las propiedades del material de la tubería (rugosidad absoluta,longitud,diámetro)
-    al igual que todos sus accesorios, sus coeficientes de pérdidas menores, las propiedades del fluido (densidad y
-    viscosidad dinámica). Además se conoce la energía impulsora, ya sea una altura gravitacional (H) o una bomba.
+    En éste tipo de problemas se conocen las propiedades del material de la tubería (rugosidad absoluta,
+    longitud,diámetro) al igual que todos sus accesorios, sus coeficientes de pérdidas menores, las 
+    propiedades del fluido (densidad y viscosidad dinámica). Además se conoce la energía impulsora, 
+    ya sea una altura gravitacional (H) o una bomba.
 
 Estructura de la función:
     Q_ComprobacionDiseno(L,d,ks,H,km,p,u,z2)
@@ -94,4 +95,4 @@ def Q_ComprobacionDiseno(L,d,ks,H,km,p,u,z2):
 
     A = Area(d)
     Q = Gasto(A, V)
-    return Q * 1000
+    return [Q * 1000,V]
