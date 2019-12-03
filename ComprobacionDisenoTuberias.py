@@ -1,5 +1,5 @@
 '''
-Función:
+Resumen:
     Comprobación de diseño de tuberías simples.
 
 Descripción:
@@ -17,7 +17,7 @@ Inputs:
     ks  = Rugosidad Absoluta (metros).
     H   = Diferencia de nivel entre los tnques de abastecimiento de agua (metros).
     km  = Coeficiente global de pérdidas menores de los accesorios (adimensional).
-    u   = Viscosidad dinámica (m^2/seg)
+    u   = Coeficiente de Viscocidad cinemática (m^2/s).
     z2  = Diferencia de altura vertical entre la toma de la tubería y la planta (metros).
 
 Output:
@@ -61,7 +61,7 @@ def Q_ComprobacionDiseno(L,d,ks,H,km,u,z2):
         return H - z2 - S_hm
 
     '''
-    Área de la tubería
+    Área de la sección transversal de la tubería
     '''
     def Area(d):
         return 0.25 * math.pi * (d ** 2)
@@ -92,6 +92,8 @@ def Q_ComprobacionDiseno(L,d,ks,H,km,u,z2):
             S_hm = Suma_hm(km, V, g)
             error = abs((hf2 - hf1) / hf2) * 100
 
+    # Cálculo del área de la sección transversal de la tubería
     A = Area(d)
+    # Cálculo del caudal que se mueve por la tubería
     Q = Gasto(A, V)
     return [Q * 1000,V]
